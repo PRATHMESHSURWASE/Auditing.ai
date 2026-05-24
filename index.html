@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auditing.ai</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-white text-gray-900">
+
+    <header class="flex items-center justify-between px-8 py-4 border-b border-gray-100">
+        <div>
+            <span style="font-family:'Syne',sans-serif;font-size:1.6rem;font-weight:700;color:#2563eb;">Auditing</span><span style="font-family:'Syne',sans-serif;font-size:1.6rem;font-weight:700;color:#111827 !important;">.ai</span>
+        </div>
+        <nav class="flex gap-6 text-sm font-medium text-gray-600">
+            <a href="#home" class="hover:text-blue-600">Home</a>
+            <a href="#audit" class="hover:text-blue-600">Audit</a>
+            <a href="#about" class="hover:text-blue-600">About</a>
+        </nav>
+        <a href="#audit" class="bg-blue-600 text-white text-sm px-4 py-2 rounded-lg hover:bg-blue-700">Start Audit →</a>
+    </header>
+
+    
+    <section id="home" class="flex flex-col items-center justify-center text-center px-6 py-24 bg-white">
+        <span class="text-xs font-semibold text-blue-600 bg-blue-50 px-3 py-1 rounded-full mb-4 tracking-wide uppercase">Free AI Spend Audit</span>
+        <h1 class="text-5xl font-bold text-gray-900 leading-tight max-w-3xl mb-6">
+            Stop Overpaying for <span class="text-blue-600">AI Tools</span>
+        </h1>
+        <p class="text-lg text-gray-500 max-w-xl mb-8">
+            Enter your team's AI subscriptions and we'll show you exactly where you're overspending — and how to fix it in minutes.
+        </p>
+        <div class="flex gap-4">
+            <a href="#audit" class="bg-blue-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-700">Run Free Audit →</a>
+            <a href="#how" class="border border-gray-200 text-gray-700 px-6 py-3 rounded-lg font-medium hover:bg-gray-50">See How It Works</a>
+        </div>
+
+    
+       
+    </section>
+
+    
+    <section id="how" class="bg-gray-50 py-20 px-6">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-3xl font-bold text-gray-900 mb-12">How It Works</h2>
+            <div class="grid grid-cols-3 gap-8">
+                <div class="bg-white rounded-xl p-6 border border-gray-100">
+                    <div class="text-2xl font-bold text-blue-600 mb-3">01</div>
+                    <h3 class="font-semibold text-gray-900 mb-2">Enter Your Tools</h3>
+                    <p class="text-sm text-gray-500">Add your AI subscriptions, plan type, team size, and monthly cost.</p>
+                </div>
+                <div class="bg-white rounded-xl p-6 border border-gray-100">
+                    <div class="text-2xl font-bold text-blue-600 mb-3">02</div>
+                    <h3 class="font-semibold text-gray-900 mb-2">We Audit It</h3>
+                    <p class="text-sm text-gray-500">Our engine compares your spend against current official pricing to find savings.</p>
+                </div>
+                <div class="bg-white rounded-xl p-6 border border-gray-100">
+                    <div class="text-2xl font-bold text-blue-600 mb-3">03</div>
+                    <h3 class="font-semibold text-gray-900 mb-2">Get Your Report</h3>
+                    <p class="text-sm text-gray-500">See per-tool breakdown, total savings, and an AI-generated summary.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <section id="audit" class="py-20 px-6 bg-white">
+        <div class="max-w-2xl mx-auto">
+            <div class="text-center mb-10">
+                <h2 class="text-3xl font-bold text-gray-900">Start Your Free Audit</h2>
+                <p class="text-gray-500 mt-2">Takes less than 2 minutes. No signup required.</p>
+            </div>
+
+            <div class="bg-white border border-gray-200 rounded-2xl p-8 shadow-sm">
+
+                
+                <div class="mb-6">
+                    <label class="block text-sm font-medium text-gray-700 mb-1">Company Name</label>
+                    <input type="text" id="company" placeholder="e.g. Acme Inc." class="w-full border border-gray-200 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500" />
+                </div>
+
+                <div class="mb-8">
+                    <label class="block text-sm font-medium text-gray-700 mb-1">Team Size</label>
+                    <input type="number" id="teamSize" placeholder="e.g. 10" class="w-full border border-gray-200 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500" />
+                </div>
+
+            
+                <div id="toolsContainer">
+                    <div class="tool-entry bg-gray-50 rounded-xl p-5 mb-4 border border-gray-100">
+                        <div class="grid grid-cols-2 gap-4 mb-4">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">AI Tool</label>
+                                <select class="tool-name w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white">
+                                    <option value="">Select tool</option>
+                                    <option value="cursor">Cursor</option>
+                                    <option value="github_copilot">GitHub Copilot</option>
+                                    <option value="chatgpt">ChatGPT</option>
+                                    <option value="claude">Claude</option>
+                                    <option value="notion_ai">Notion AI</option>
+                                    <option value="midjourney">Midjourney</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Current Plan</label>
+                                <input type="text" class="tool-plan w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="e.g. Pro, Business" />
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">No. of Seats</label>
+                                <input type="number" class="tool-seats w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="e.g. 5" />
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Monthly Cost ($)</label>
+                                <input type="number" class="tool-cost w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="e.g. 100" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <button onclick="addTool()" class="w-full border border-dashed border-blue-300 text-blue-600 text-sm py-3 rounded-xl hover:bg-blue-50 mb-6">
+                    + Add Another Tool
+                </button>
+
+                
+                <button onclick="submitAudit()" class="w-full bg-blue-600 text-white py-3 rounded-xl font-semibold hover:bg-blue-700 text-sm">
+                    Run My Audit →
+                </button>
+
+            </div>
+        </div>
+    </section>
+
+
+    <footer class="border-t border-gray-100 py-6 text-center text-sm text-gray-400">
+        © 2025 Auditing.ai — Built for Credex Internship Assignment
+    </footer>
+
+    <script src="script.js"></script>
+
+    <script>
+        function addTool() {
+            const container = document.getElementById('toolsContainer');
+            const newTool = document.createElement('div');
+            newTool.className = 'tool-entry bg-gray-50 rounded-xl p-5 mb-4 border border-gray-100';
+            newTool.innerHTML = `
+                <div class="flex justify-end mb-2">
+                    <button onclick="this.closest('.tool-entry').remove()" class="text-xs text-red-400 hover:text-red-600">Remove</button>
+                </div>
+                <div class="grid grid-cols-2 gap-4 mb-4">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">AI Tool</label>
+                        <select class="tool-name w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white">
+                            <option value="">Select tool</option>
+                            <option value="cursor">Cursor</option>
+                            <option value="github_copilot">GitHub Copilot</option>
+                            <option value="chatgpt">ChatGPT</option>
+                            <option value="claude">Claude</option>
+                            <option value="notion_ai">Notion AI</option>
+                            <option value="midjourney">Midjourney</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Current Plan</label>
+                        <input type="text" class="tool-plan w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="e.g. Pro, Business" />
+                    </div>
+                </div>
+                <div class="grid grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">No. of Seats</label>
+                        <input type="number" class="tool-seats w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="e.g. 5" />
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Monthly Cost ($)</label>
+                        <input type="number" class="tool-cost w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="e.g. 100" />
+                    </div>
+                </div>
+            `;
+            container.appendChild(newTool);
+        }
+
+        function submitAudit() {
+            const company = document.getElementById('company').value;
+            const teamSize = document.getElementById('teamSize').value;
+
+            if (!company || !teamSize) {
+                alert('Please enter company name and team size.');
+                return;
+            }
+
+            const tools = [];
+            document.querySelectorAll('.tool-entry').forEach(entry => {
+                const name = entry.querySelector('.tool-name').value;
+                const plan = entry.querySelector('.tool-plan').value;
+                const seats = entry.querySelector('.tool-seats').value;
+                const cost = entry.querySelector('.tool-cost').value;
+                if (name) tools.push({ name, plan, seats: parseInt(seats), cost: parseFloat(cost) });
+            });
+
+            if (tools.length === 0) {
+                alert('Please add at least one AI tool.');
+                return;
+            }
+
+            
+            localStorage.setItem('auditData', JSON.stringify({ company, teamSize, tools }));
+
+        
+            window.location.href = 'results.html';
+        }
+
+        
+        document.addEventListener('input', () => {
+            const company = document.getElementById('company').value;
+            const teamSize = document.getElementById('teamSize').value;
+            localStorage.setItem('auditDraft', JSON.stringify({ company, teamSize }));
+        });
+
+    
+        window.onload = () => {
+            const draft = JSON.parse(localStorage.getItem('auditDraft'));
+            if (draft) {
+                document.getElementById('company').value = draft.company || '';
+                document.getElementById('teamSize').value = draft.teamSize || '';
+            }
+        };
+    </script>
+
+</body>
+</html
