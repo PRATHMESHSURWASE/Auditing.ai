@@ -5,7 +5,7 @@ A free tool that helps startups identify overspending on AI tools like Cursor, G
 
 
 ## GitHub
-[github.com/PRATHMESHSURWASE/ai-spend-audit](https://github.com/PRATHMESHSURWASE/ai-spend-audit)
+https://github.com/PRATHMESHSURWASE/Auditing.ai
 
 ## Features
 - Spend input form with localStorage persistence
@@ -18,7 +18,7 @@ A free tool that helps startups identify overspending on AI tools like Cursor, G
 ## Tech Stack
 - HTML, CSS, JavaScript (Vanilla)
 - Tailwind CSS (CDN)
-- Claude/Groq API for AI summary
+- Gemini API for AI summary
 - localStorage for state persistence
 
 ## Setup
